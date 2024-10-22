@@ -61,6 +61,97 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
+Laravel To-Do List Application
+Project Overview
+This is a To-Do List application built using the Laravel framework, designed to help users manage tasks effectively. The application supports key functionalities like adding, viewing, editing, and deleting tasks, as well as marking tasks as completed. The project implements user authentication, task validation, and a responsive user interface for both mobile and desktop.
+
+Features
+Add, Edit, and Delete Tasks: Manage tasks effortlessly with intuitive CRUD operations.
+Task Completion: Mark tasks as completed or pending.
+User Authentication: Secure user management with registration, login, and logout features.
+Responsive Design: Optimized for mobile and desktop views.
+Task Validation: Ensures all task inputs are validated before submission.
+Database Management: Tasks are stored in a MySQL/PostgreSQL database.
+
+Installation
+
+Requirements
+PHP >= 8.0
+Composer (Dependency Manager)
+MySQL or PostgreSQL database
+Git
+
+----Clone the Repository
+bash
+git clone https://github.com/your-username/your-repository.git
+cd your-repository
+
+----Install Dependencies
+By Composer installed. Then, run:
+bash
+composer install
+
+----Set Up the Environment File
+Create a .env file by copying the example:
+bash 
+cp .env.example .env
+
+----Then, update the .env file with your database credentials:
+bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+----Generate the Application Key
+bash 
+php artisan key:generate
+
+----Run Database Migrations
+bash 
+php artisan migrate
+
+----Serve the Application Locally
+We can serve the application locally with:
+bash 
+php artisan serve
+Open your browser and navigate to http://127.0.0.1:8000.
+
+Deployment on Render
+This project is ready for deployment on Render. Follow these steps to deploy:
+
+----Create a Render Account
+If you don’t have an account, sign up on Render.
+
+----Link the GitHub Repository
+On Render, click New Web Service.
+Connect your GitHub repository.
+Select the branch to deploy (e.g., main or master)(In my case it is main)
+Set up environment variables, including your database credentials in the Environment section (use the same settings as in the .env file).
+
+----Configure Build Commands
+Install Dependencies:
+bash
+composer install --optimize-autoloader --no-dev
+
+----Run Migrations:
+bash
+php artisan migrate --force
+Run Application: Render will automatically serve your application.
+
+----View Deployed App
+Once deployed, your application will be accessible via a public URL provided by Render.
+
+Technologies Used
+Laravel - Backend framework.
+Blade - Templating engine.
+Xampp-For Apache and MySQL 
+MySQL - Relational database management.
+Bootstrap - Some part of Bootstrap for Responsive design framework for the UI.
+Render - For Deployment 
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
